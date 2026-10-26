@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parte 2 - El hombre que calculaba</title>
+  <link rel="stylesheet" href="Css/style1.css">
+</head>
+<body>
+
+  <header>
+    <h1>Parte 2: El hombre que calculaba</h1>
+    <p>Dos problemas de Malba Tahan resueltos con JavaScript</p>
+  </header>
+
+  <nav>
+    <a href="index1.html">Parte 1</a>
+    <a href="index2.html">Parte 2</a>
+  </nav>
+
+  <main>
+
+    <!-- ================= PROBLEMA 1: LOS 35 CAMELLOS ================= -->
+    <section class="tarjeta">
+      <h2>Problema 1: Los 35 camellos</h2>
+
+      <div class="descripcion">
+        <p><b>Descripción:</b> tres hermanos heredan 35 camellos. Al mayor le
+        toca 1/2, al segundo 1/3 y al menor 1/9. Como 35 no se divide
+        exactamente, Beremiz agrega su camello (total 36), reparte y
+        al final sobran camellos: devuelve el suyo y se queda con el resto.</p>
+        <p><b>Algoritmo:</b></p>
+        <ol>
+          <li>Leer los camellos y los tres denominadores.</li>
+          <li>total = camellos + 1 (el camello prestado).</li>
+          <li>Verificar que total sea divisible entre cada denominador.</li>
+          <li>parte1 = total / d1, parte2 = total / d2, parte3 = total / d3.</li>
+          <li>sobran = total − (parte1 + parte2 + parte3).</li>
+          <li>Se devuelve 1 camello y el resto es para Beremiz.</li>
+        </ol>
+        <p><b>Entrada:</b> camellos y denominadores. <b>Salida:</b> reparto y camellos sobrantes.</p>
+      </div>
+
+      <label for="camellos">Camellos de la herencia</label>
+      <input type="number" id="camellos" placeholder="Ejemplo: 35">
+
+      <label for="d1">Denominador del hermano mayor (1/d1)</label>
+      <input type="number" id="d1" placeholder="Ejemplo: 2">
+
+      <label for="d2">Denominador del segundo hermano (1/d2)</label>
+      <input type="number" id="d2" placeholder="Ejemplo: 3">
+
+      <label for="d3">Denominador del hermano menor (1/d3)</label>
+      <input type="number" id="d3" placeholder="Ejemplo: 9">
+
+      <button id="btnCamellos">Repartir</button>
+      <button id="btnLimpiar1" class="secundario">Limpiar</button>
+
+      <div id="salidaCamellos" class="resultado"></div>
+    </section>
+
+    <!-- ================= PROBLEMA 2: LOS 8 PANES ================= -->
+    <section class="tarjeta">
+      <h2>Problema 2: Los ocho panes</h2>
+
+      <div class="descripcion">
+        <p><b>Descripción:</b> dos viajeros llevan 5 y 3 panes. Se encuentran
+        con un tercer hombre y los tres comen partes iguales. El tercero paga
+        8 monedas. ¿Cómo se reparten las monedas justamente?</p>
+        <p><b>Algoritmo:</b></p>
+        <ol>
+          <li>Leer panes del viajero A, panes del viajero B y monedas.</li>
+          <li>total = A + B.</li>
+          <li>Cada uno come comida = total / 3.</li>
+          <li>Los panes que A le dio al tercero = A − comida; B le dio = B − comida.</li>
+          <li>Las monedas se reparten proporcionalmente a lo que cada uno dio:
+          monedasA = monedas · (aporteA / comida).</li>
+        </ol>
+        <p><b>Entrada:</b> panes de A, panes de B, monedas. <b>Salida:</b> monedas para cada viajero.</p>
+      </div>
+
+      <label for="panesA">Panes del viajero A</label>
+      <input type="number" id="panesA" placeholder="Ejemplo: 5">
+
+      <label for="panesB">Panes del viajero B</label>
+      <input type="number" id="panesB" placeholder="Ejemplo: 3">
+
+      <label for="monedas">Monedas que paga el tercer hombre</label>
+      <input type="number" id="monedas" placeholder="Ejemplo: 8">
+
+      <button id="btnPanes">Repartir monedas</button>
+      <button id="btnLimpiar2" class="secundario">Limpiar</button>
+
+      <div id="salidaPanes" class="resultado"></div>
+    </section>
+
+  </main>
+
+  <footer>Basado en "El hombre que calculaba" de Malba Tahan</footer>
+
+  <script src="Js/parte2.js"></script>
+</body>
+</html>

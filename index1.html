@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parte 1 - Problemas 12 y 13</title>
+  <link rel="stylesheet" href="Css/style1.css">
+</head>
+<body>
+
+  <header>
+    <h1>Parte 1: Problemas 12 y 13</h1>
+    <p>Resueltos con HTML, CSS y JavaScript</p>
+  </header>
+
+  <nav>
+    <a href="index1.html">Parte 1</a>
+    <a href="index2.html">Parte 2</a>
+  </nav>
+
+  <main>
+
+    <!-- ================= PROBLEMA 12 ================= -->
+    <section class="tarjeta">
+      <h2>Problema 12: Raíces de una ecuación cuadrática</h2>
+
+      <div class="descripcion">
+        <p><b>Descripción:</b> determinar las raíces reales de la ecuación
+        ax² + bx + c = 0 usando el discriminante D = b² − 4ac.</p>
+        <p><b>Algoritmo:</b></p>
+        <ol>
+          <li>Leer a, b y c.</li>
+          <li>Calcular D = b² − 4ac.</li>
+          <li>Si D &gt; 0: dos raíces, x = (−b ± √D) / 2a.</li>
+          <li>Si D = 0: una raíz, x = −b / 2a.</li>
+          <li>Si D &lt; 0: no hay raíces reales.</li>
+        </ol>
+        <p><b>Entrada:</b> a, b, c. <b>Salida:</b> mensaje y raíces.</p>
+      </div>
+
+      <label for="a">Valor de a</label>
+      <input type="number" id="a" placeholder="Ejemplo: -3">
+
+      <label for="b">Valor de b</label>
+      <input type="number" id="b" placeholder="Ejemplo: 7">
+
+      <label for="c">Valor de c</label>
+      <input type="number" id="c" placeholder="Ejemplo: 5">
+
+      <button id="btnRaices">Calcular raíces</button>
+      <button id="btnLimpiar12" class="secundario">Limpiar</button>
+
+      <div id="salida12" class="resultado"></div>
+    </section>
+
+    <!-- ================= PROBLEMA 13 ================= -->
+    <section class="tarjeta">
+      <h2>Problema 13: Estimar el valor de π</h2>
+
+      <div class="descripcion">
+        <p><b>Descripción:</b> π se estima con la expresión
+        √( 6 · (1/1² + 1/2² + 1/3² + ... + 1/n²) ).
+        Se compara el resultado con el valor real de π.</p>
+        <p><b>Algoritmo:</b></p>
+        <ol>
+          <li>Leer n.</li>
+          <li>suma = 0.</li>
+          <li>Con un bucle for, de k = 1 hasta n: suma = suma + 1/k².</li>
+          <li>pi estimado = √(6 · suma).</li>
+          <li>error = |π real − π estimado|.</li>
+        </ol>
+        <p><b>Entrada:</b> n (100, 10000, 1000000). <b>Salida:</b> π estimado, π real y error.</p>
+      </div>
+
+      <label for="n">Valor de n</label>
+      <input type="number" id="n" placeholder="Ejemplo: 100">
+
+      <button id="btnPi">Estimar π</button>
+      <button id="n100" class="secundario">n = 100</button>
+      <button id="n10000" class="secundario">n = 10000</button>
+      <button id="n1000000" class="secundario">n = 1000000</button>
+
+      <div id="salida13" class="resultado"></div>
+    </section>
+
+  </main>
+
+  <footer>Tarea de programación con JavaScript</footer>
+
+  <script src="Js/parte1.js"></script>
+</body>
+</html>
